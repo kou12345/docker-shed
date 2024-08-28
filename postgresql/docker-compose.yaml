@@ -1,13 +1,12 @@
-version: '3.8'
 services:
   db:
     image: postgres:15
-    container_name: arcus-db
+    container_name: my-db
     restart: always
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: ${DB_PASSWORD}
-      POSTGRES_DB: arcus-db
+      POSTGRES_DB: my-db
     volumes:
       - db-store:/var/lib/postgresql/data
     ports:
